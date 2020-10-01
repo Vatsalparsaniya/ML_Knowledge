@@ -6,6 +6,16 @@
   - It can also be represented using a very simple Bayesian network. 
  
 * **How Algorithm Works** 
+
+  ![Naive_Bayes_Classifier1](Naive_Bayes_Classifier1.png)
+  
+ ```
+  Where,
+    P(c|x) is the posterior probability of class c given predictor ( features).
+    P(c) is the probability of class.
+    P(x|c) is the likelihood which is the probability of predictor given class.
+    P(x) is the prior probability of predictor.
+ ```
   
 * **Advantages of Naive Bayes Classifier**
   - The only work that must be done before prediction is finding the parameters for the features’ individual probability distributions, which can typically be done quickly and deterministically.
