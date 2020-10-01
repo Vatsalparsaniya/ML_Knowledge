@@ -1,4 +1,4 @@
-# I have very basic, surface level knowledge on AI/ML. This is an article i've collected.
+# STANDARDIZATION and NORMALIZATION
 
 Standardization:
 	“Standardizing” a vector most often means subtracting a measure of location and dividing by a measure of scale. 
