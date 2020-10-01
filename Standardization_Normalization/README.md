@@ -18,7 +18,7 @@ When to use Standardization?
 	Standardization is useful when your data has varying scales and the algorithm you are using does make assumptions about your data having a Gaussian distribution, such as linear regression, logistic regression, and linear discriminant analysis.
 	
 How to Standardize?
-	Standardization (Standard Scalar) :
+Standardization (Standard Scalar) :
 	As we discussed earlier, standardization (or Z-score normalization) means centering the variable at zero and standardizing the variance at 1. The procedure involves subtracting the mean of each observation and then dividing by the standard deviation:
 	The result of standardization is that the features will be rescaled so that they’ll have the properties of a standard normal distribution with
 	μ=0 and σ=1
@@ -40,7 +40,7 @@ How to Standardize?
 	print('Min values (Loan Amount, Int rate and Installment): ', data_scaled.min(axis=0))
 	print('Max values (Loan Amount, Int rate and Installment): ', data_scaled.max(axis=0))
 
-	However, the minimum and maximum values vary according to how spread out the variable was, to begin with, and is highly influenced by the presence of outliers.
+	#However, the minimum and maximum values vary according to how spread out the variable was, to begin with, and is highly influenced by the presence of outliers.
 	
 
 Normalization:
@@ -62,7 +62,7 @@ When to use Normalization?
 	Normalization is useful when your data has varying scales and the algorithm you are using does not make assumptions about the distribution of your data, such as k-nearest neighbors and artificial neural networks.
 	
 How to Normalize?
-	Normalization (Min-Max Scalar) :
+Normalization (Min-Max Scalar) :
 	In this approach, the data is scaled to a fixed range — usually 0 to 1.
 	In contrast to standardization, the cost of having this bounded range is that we will end up with smaller standard deviations, which can suppress the effect of outliers. 
 	Thus MinMax Scalar is sensitive to outliers.
@@ -83,11 +83,11 @@ How to Normalize?
 	print('Min (Loan Amount, Int rate and Installment): ', data_scaled.min(axis=0))
 	print('Max (Loan Amount, Int rate and Installment): ', data_scaled.max(axis=0))
 	
-	But the minimum and maximum values are standardized across variables, different from what occurs with standardization.
-
-	Robust Scalar (Scaling to median and quantiles) :
-	Scaling using median and quantiles consists of subtracting the median to all the observations and then dividing by the interquartile difference. 
-	It Scales features using statistics that are robust to outliers.
+	#But the minimum and maximum values are standardized across variables, different from what occurs with standardization.
+	
+	
+Robust Scalar (Scaling to median and quantiles) :
+	Scaling using median and quantiles consists of subtracting the median to all the observations and then dividing by the interquartile difference. It Scales features using statistics that are robust to outliers.
 
 	The interquartile difference is the difference between the 75th and 25th quantile:
 	IQR = 75th quantile — 25th quantile
@@ -108,4 +108,4 @@ How to Normalize?
 	print('Min (Loan Amount, Int rate and Installment): ', data_scaled.min(axis=0))
 	print('Max (Loan Amount, Int rate and Installment): ', data_scaled.max(axis=0))
 
-	Neither are the minimum and maximum values set to a certain upper and lower boundaries like in the MinMaxScaler.
+	#Neither are the minimum and maximum values set to a certain upper and lower boundaries like in the MinMaxScaler.
