@@ -1,3 +1,5 @@
+# I have very basic, surface level knowledge on AI/ML. This is an article i've collected.
+
 Standardization:
 	“Standardizing” a vector most often means subtracting a measure of location and dividing by a measure of scale. 
 	For example, if the vector contains random values with a Gaussian distribution, you might subtract the mean and divide by the standard deviation, thereby obtaining a “standard normal” random variable with mean 0 and standard deviation 1.
@@ -18,13 +20,11 @@ When to use Standardization?
 How to Standardize?
 	Standardization (Standard Scalar) :
 	As we discussed earlier, standardization (or Z-score normalization) means centering the variable at zero and standardizing the variance at 1. The procedure involves subtracting the mean of each observation and then dividing by the standard deviation:
-
 	The result of standardization is that the features will be rescaled so that they’ll have the properties of a standard normal distribution with
-
 	μ=0 and σ=1
 	where μ is the mean (average) and σ is the standard deviation from the mean.
 
-CODE:
+	CODE:
 	#StandardScaler from sci-kit-learn removes the mean and scales the data to unit variance. We can import the StandardScalar method from sci-kit learn and apply it to our dataset.
 
 	from sklearn.preprocessing import StandardScaler

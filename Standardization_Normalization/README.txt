@@ -1,1 +1,0 @@
-I have very basic, surface level knowledge on AI/ML. This is an article i've collected.
