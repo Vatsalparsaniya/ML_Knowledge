@@ -29,7 +29,7 @@
       - Advantages
       - Disadvantages
       - What Are the Basic Assumption
-      - In which problem statement you can your this concept or Algorithm
+      - In which problem statement you can use this concept or Algorithm
     - **`list of concepts: Stacking, Ensembling, Cross-Validation, Stacking VS Blending, standardisation, normalization, standardisation vs normalization`**, etc...
     - **`List of Algorithms: Linear Regression, Logistic Regression, Decision Tree, SVM (Support Vector Machine), Naive Bayes, KNN (K- Nearest Neighbors), K-Means, Random Forest`**, etc...
 
