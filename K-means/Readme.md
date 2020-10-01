@@ -35,29 +35,29 @@ Initially k number of so called centroids are chosen. A centroid is a data point
 
 ### :large_blue_diamond: Advantages of k-means ###
 
-    Relatively simple to implement.
+   Relatively simple to implement.
 
-    :heavy_check_mark: Scales to large data sets.
+   :heavy_check_mark: Scales to large data sets.
 
-    :heavy_check_mark: Guarantees convergence.
+   :heavy_check_mark: Guarantees convergence.
 
-    :heavy_check_mark: Can warm-start the positions of centroids.
+   :heavy_check_mark: Can warm-start the positions of centroids.
 
-    :heavy_check_mark: Easily adapts to new examples.
+   :heavy_check_mark: Easily adapts to new examples.
 
-    :heavy_check_mark: Generalizes to clusters of different shapes and sizes, such as elliptical clusters.
+   :heavy_check_mark: Generalizes to clusters of different shapes and sizes, such as elliptical clusters.
 
 ### :large_blue_diamond: Disadvantages of k-means ###
 
-    :x: Choosing k manually.
+   :x: Choosing k manually.
 
-    :x: Being dependent on initial values.
+   :x: Being dependent on initial values.
 
-    :x: Clustering data of varying sizes and density.
+   :x: Clustering data of varying sizes and density.
 
-    :x: Clustering outliers.
+   :x: Clustering outliers.
 
-    :x: Scaling with number of dimensions.
+   :x: Scaling with number of dimensions.
 
 
 #### Do you want to learn more? Click here. ####
