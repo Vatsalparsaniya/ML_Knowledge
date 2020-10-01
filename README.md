@@ -2,8 +2,8 @@
 
 ---
 
-* Use this project to make your first contribution to an open source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!
-* Celebrate [Hacktoberfest](https://hacktoberfest.digitalocean.com/) by getting involved in the open source community by completing some simple tasks in this project.
+* Use this project to make your first contribution to an open-source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!
+* Celebrate [Hacktoberfest](https://hacktoberfest.digitalocean.com/) by getting involved in the open-source community by completing some simple tasks in this project.
 * This repository is open to all members of the GitHub community. Any member may contribute to this project without being a collaborator.
 * [https://github.com/Vatsalparsaniya/ML_Knowledge](https://github.com/Vatsalparsaniya/ML_Knowledge)
 
@@ -19,21 +19,21 @@
 
 - Add your name to the Contributors.md file 
   - Ex. `[Vatsal Parsaniya](https://github.com/Vatsalparsaniya)`
-- Collect **Machine Learning, Deep Lerning, DataScience Concepts or Algorithum** if information is taken form any refrence don't forget to add reference.
+- Collect **Machine Learning, Deep Learning, DataScience Concepts or Algorithm** if the information is taken form any reference don't forget to add a reference.
   - Ex. I want to Add `Concepts of Outlier` 
-    - make a folder named `Outlier`, if alrealy present in repository add additional information into that.
+    - make a folder named `Outlier`, if already present in repository add additional information into that.
     - create `Readme.md` file in `Outlier` folder add your knowledge there
     - You can add knowledge like: 
       - Why this concept
-      - How this algorithum works
+      - How this algorithm works
       - Advantages
       - Disadvantages
       - What Are the Basic Assumption
-      - In which problem statement you can your this concept or Algorithum
-    - list of concepts : Stacking, Ensembling , Cross-Velidation, Stacking VS Blending, standardisation, normalization, standardisation vs normalization, etc...
-    - List of Algorithums : Linear Regression, Logistic Regression, Decision Tree, SVM (Support Vector Machine), Naive Bayes, KNN (K- Nearest Neighbors), K-Means, Random Forest, etc...
+      - In which problem statement you can your this concept or Algorithm
+    - list of concepts: Stacking, Ensembling, Cross-Validation, Stacking VS Blending, standardisation, normalization, standardisation vs normalization, etc...
+    - List of Algorithms: Linear Regression, Logistic Regression, Decision Tree, SVM (Support Vector Machine), Naive Bayes, KNN (K- Nearest Neighbors), K-Means, Random Forest, etc...
 
-* Choose one or all , make a pull request for your work and wait for it to be merged!
+* Choose one or all, make a pull request for your work and wait for it to be merged!
 ---
 ## Getting started
 
@@ -50,7 +50,7 @@
 5) Commit and push
 
 ```bash
-git add .
+git add
 git commit -m 'Commit message'
 git push origin branch-name
 ```
