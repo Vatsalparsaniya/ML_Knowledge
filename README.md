@@ -13,8 +13,7 @@
 
 * A month-long celebration from October 1st - 31st sponsored by Digital Ocean and GitHub to get people involved in Open Source. Create your very first pull request to any public repository on GitHub and contribute to the open source developer community. https://hacktoberfest.digitalocean.com/
 ---
-## How to contribute to this project
-
+## How to contribute to this project😕
 
 * Here are quick and painless ways to contribute to this project:
 
@@ -24,6 +23,15 @@
   - Ex. I want to Add `Concepts of Outlier` 
     - make a folder named `Outlier`, if alrealy present in repository add additional information into that.
     - create `Readme.md` file in `Outlier` folder add your knowledge there
+    - You can add knowledge like: 
+      - Why this concept
+      - How this algorithum works
+      - Advantages
+      - Disadvantages
+      - What Are the Basic Assumption
+      - In which problem statement you can your this concept or Algorithum
+    - list of concepts : Stacking, Ensembling , Cross-Velidation, Stacking VS Blending, standardisation, normalization, standardisation vs normalization, etc...
+    - List of Algorithums : Linear Regression, Logistic Regression, Decision Tree, SVM (Support Vector Machine), Naive Bayes, KNN (K- Nearest Neighbors), K-Means, Random Forest, etc...
 
 * Choose one or all , make a pull request for your work and wait for it to be merged!
 ---
@@ -49,4 +57,4 @@ git push origin branch-name
 
 6) Create a new pull request from your forked repository (Click the New Pull Request button located at the top of your repo)
 7) Wait for your PR review and merge approval!
-8) Star this repository if you had fun!
+8) Star🌟 this repository if you had fun!
