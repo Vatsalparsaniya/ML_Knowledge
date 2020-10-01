@@ -5,6 +5,20 @@
     - Classification and Regression Tasks
     - Goal: Create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features
 
+* **Advantages**
+    1) Requires less effort for data preparation during pre-processing
+    2) Does not require normalization of data
+    3) Does not require scaling of data 
+    4) Missing values in the data do NOT affect the process of building a decision tree to any considerable extent
+    5) Very intuitive and easy to explain to technical teams as well as stakeholders
+    
+* **Disadvantages**
+    1) A small change in the data can cause a large change in the structure of the decision tree causing instability.
+    2) For a Decision tree sometimes calculation can go far more complex compared to other algorithms.
+    3) Decision tree often involves higher time to train the model.
+    4) Decision tree training is relatively expensive as the complexity and time taken are more.
+    5) Decision Tree algorithm is inadequate for applying regression and predicting continuous values.
+
 * **Introduction**
     - Tree-like graph with nodes representing the place where we pick an attribute and ask a question; edges represent the answers the to the question; and the leaves represent the actual output or class label.
     - Used in Non-linear decision making with simple linear decision surface. 
@@ -37,4 +51,5 @@ The best split is one which separates two different labels into two sets.
 
 * **Reference**
 
-https://www.hackerearth.com/practice/machine-learning/machine-learning-algorithms/ml-decision-tree/tutorial/
+- https://www.hackerearth.com/practice/machine-learning/machine-learning-algorithms/ml-decision-tree/tutorial/
+- https://medium.com/@dhiraj8899/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a
