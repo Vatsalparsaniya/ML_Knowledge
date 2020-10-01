@@ -4,6 +4,8 @@ In statistics, outliers are data points that don’t belong to a certain populat
 
 For Example, you can clearly see the outlier in this list: [20,24,22,19,29,18,**4300**,30,18]
 
+![outliers1](outliers1.jpg)
+
 ### Types of Outliers
 
 * **Univariate**
