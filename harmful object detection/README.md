@@ -25,7 +25,7 @@ Cascade Trainer GUI is a program that can be used to train, test and improve cas
       > 2) Lacks in accuracy when it comes to the noicy input and small objects
 ## 5) What Are the Basic Assumption
       > Moving object detection under a moving camera has long been a very challenging task as the movements of the moving objects and motion caused by the camera are merged in the image sequence.
-## 6) In which problem statement you can your this concept or Algorithm/
+## 6) In which problem statement you can your this concept or Algorithm?
       > You can use this as your hello world of object detection if you wanted to perform it on Edge devices. Also you can use it where you want to detect the a single object, you can use this technique.
     
   
