@@ -1,4 +1,4 @@
-#Decision Trees Algorithm
+# Decision Trees Algorithm
 ---
 * **Characteristics**
     - Supervised Learning
@@ -14,13 +14,17 @@
 Let's assume we want to play badminton on a particular day — say Saturday — how will you decide whether to play or not. Let's say you go out and check if it's hot or cold, check the speed of the wind and humidity, how the weather is, i.e. is it sunny, cloudy, or rainy. You take all these factors into account to decide if you want to play or not.
 
 So, you calculate all these factors for the last ten days and form a lookup table like the one below.
-![Decision_Trees1](Decision_Trees1.png)
-<center>Table 1. Obeservations of the last ten days.</center>
+
+![Decision_Trees1](Decision_Trees1.PNG)
+
+<p align="justify">Table 1. Obeservations of the last ten days.</p>
 
 
 Now, you may use this table to decide whether to play or not. But, what if the weather pattern on Saturday does not match with any of rows in the table? This may be a problem. A decision tree would be a great way to represent data like this because it takes into account all the possible paths that can lead to the final decision by following a tree-like structure.
-![Decision_Trees2](Decision_Trees2.png)
-<center>Fig 2. A decision tree for the concept Play Badminton (when attributes are continuous)</center>
+
+![Decision_Trees2](Decision_Trees2.PNG)
+
+<p align="justify">Fig 2. A decision tree for the concept Play Badminton (when attributes are continuous)</p>
 
 
 A general algorithm for a decision tree can be described as follows:
@@ -32,4 +36,5 @@ A general algorithm for a decision tree can be described as follows:
 The best split is one which separates two different labels into two sets.
 
 * **Reference**
+
 https://www.hackerearth.com/practice/machine-learning/machine-learning-algorithms/ml-decision-tree/tutorial/
