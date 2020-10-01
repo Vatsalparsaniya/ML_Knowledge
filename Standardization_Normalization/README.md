@@ -88,7 +88,6 @@ Normalization (Min-Max Scalar) :
 	
 Robust Scalar (Scaling to median and quantiles) :
 	Scaling using median and quantiles consists of subtracting the median to all the observations and then dividing by the interquartile difference. It Scales features using statistics that are robust to outliers.
-
 	The interquartile difference is the difference between the 75th and 25th quantile:
 	IQR = 75th quantile — 25th quantile
 
