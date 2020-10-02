@@ -57,4 +57,4 @@ This is the most important part where you will be finding the model the best fit
 
 For example, you might have to create a predictive model that compares your underperforming group with your average customer. You might find out that age and social media activity are significant factors in predicting who will buy the product.
 
-###
+**REFERENCE** : Analytics Vidhya, KDNuggets
