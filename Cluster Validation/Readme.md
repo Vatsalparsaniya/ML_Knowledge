@@ -91,7 +91,7 @@ The centroid diameter distance defines the double average distance between all o
 ![Intracluster distance](intraclusterdistance3.PNG "intraclusterdistance3")
 
 
-###Dunn’s Index ###
+### Dunn’s Index ###
 
 :triangular_flag_on_post: The Dunn’s valida9on index, DIndex, is defined as:
 
