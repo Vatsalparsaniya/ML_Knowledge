@@ -4,8 +4,11 @@
 analyze very large datasets. Most algorithms don’t provide any means for its validation and evaluation. So it is very difficult to conclude which are the best clusters and should be taken for analysis. Whatever the intention of clustering may be, the number of clusters sought is always unknown (more or less). Some internal measures:
 
 :heavy_check_mark: Compactness
+
 :heavy_check_mark: Connectedness
+
 :heavy_check_mark: Separation
+
 :heavy_check_mark: Combination
 
 ## Internal measures ##
@@ -17,10 +20,15 @@ analyze very large datasets. Most algorithms don’t provide any means for its v
 :triangular_flag_on_post: There are several robust strategies for predicting optimal clusters:
 
 :heavy_check_mark: silhouette index
+
 :heavy_check_mark: Dunn’s index
-:heavy_check_mark: Davies-Bouldin (DB) index.
+
+:heavy_check_mark: Davies-Bouldin (DB) index
+
 :heavy_check_mark: Xie-Beni (XB) index
+
 :heavy_check_mark: I-index
+
 :heavy_check_mark: CS-index
 
 ## Distance ##
@@ -28,9 +36,13 @@ analyze very large datasets. Most algorithms don’t provide any means for its v
 Calculate a distance between 2 points p (x1, y1) and q (x2, y2) in XY-plane.
 
 :heavy_check_mark: Euclidean distance
+
 :heavy_check_mark: Chebyshev distance
+
 :heavy_check_mark: Manhattan distance
+
 :heavy_check_mark: Mahalanobis distance
+
 :heavy_check_mark: Minkowski distance
 
 ![Distance](distance.PNG "distance")
@@ -95,3 +107,8 @@ The goal is to maximize the intercluster distances and minimizing the intraclust
 :triangular_flag_on_post: Davies-Bouldin Index finds the set of clusters that are compact and well separated. The Davies-Bouldin index DBIndex is defined as:
 
 ![Davies-Bouldin index](davies-bouldinindex.PNG "davies-bouldinindex")
+
+### References ###
+[Link 1] (https://www.datanovia.com/en/lessons/cluster-validation-statistics-must-know-methods/)
+
+[Link 2] (https://www.youtube.com/watch?v=d8MgdChSdyE)
