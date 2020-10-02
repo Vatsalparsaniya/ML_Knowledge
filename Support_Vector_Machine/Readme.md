@@ -36,7 +36,7 @@ When data are unlabelled, supervised learning is not possible, and an unsupervis
 ### :large_blue_diamond: How does Support vector machine work? ###
 
 #### 1. Linearly Separable Data ####
- 
+
 Let us understand the working of SVM by taking an example where we have two classes that are shown is the below image which are a class A: Circle & class B: Triangle. Now, we want to apply the SVM algorithm and find out the best hyperplane that divides the both classes.
 
 ![Linear Separable Data](images/1.JPG)
@@ -53,7 +53,7 @@ There can be different dimensions which solely depends upon the features we have
 
 ![Linear Separable Data](images/4.JPG)
 
-Consider we have two classes that are red and yellow class A and B respectively. We need to find the best hyperplane between them that divides the two classes. 
+Consider we have two classes that are red and yellow class A and B respectively. We need to find the best hyperplane between them that divides the two classes.
 
 ![Linear Separable Data](images/5.JPG)
 
@@ -96,6 +96,5 @@ If the data is non linearly separable as shown in the above figure then SVM make
 
 [Link 5](https://towardsdatascience.com/i-support-vector-machines-and-so-should-you-7af122b6748)
 
-
-
-
+#### SVM(Support Vector Machine): some more information about svm including real world problems
+[Link 1](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
