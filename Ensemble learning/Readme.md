@@ -2,16 +2,17 @@
 
 * Ensemble is a technique in machine learning in which we combine different machine learning models to achieve most optimal model.
 
-* we use different base model(they are also called weak learners) such as one is **decision tree** and  **svm** to make one model(strong learner), with less bias and less variance. 
+* we use different base model(they are also called weak learners) such as one is **Decision tree** and  **SVM** to make one model(strong learner), with less bias and less variance. 
 * Ensemble methods used extensively in machine learning.
 
 ## How this works
 
-* First the same data points from training data set is passed through different model and result is  calculated by simply the choosing algorithm such as averages or max voting. 
+* First the same data points from training data set is passed through different model and result model is calculated by simply the choosing algorithm such as averages or max voting. 
 
-![stacking](./Stacking.png)
+![diagram](./ensemble-diagram.png)
 
- **Base Learners or weak learners** are individual model such as knn, decision tree classifers etc.
+ **Base Learners or weak learners** are individual model such as KNN, DECISION TREE CLASSIFIER etc.
+ 
  **Meta Learner or strong learner** is combined model and is used for final prediction.
 ## There are different ensemble techniques.
 
@@ -33,10 +34,11 @@
 
 ##  Disadvantage of ensemble
 
-* High  computation power is required as compared to individual models.
+* High computation power is required as compared to individual models.
 * Ensemble model is complex and can be more difficult to interpret.
 * More time is consumed in training the ensemble models as compared to individual model.
 
 ## Applications
 * Ensemble models are used to achieve low bias and low variance overall.
+* Ensemble models have Higher precision and accuracy.
 * Used in data science competition for optimizing the models and better performance.
