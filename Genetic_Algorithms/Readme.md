@@ -51,3 +51,6 @@ As per the discussions above, the following are the limitations to Genetic Algor
 * [Genetic Algorithm in Artificial Intelligence](https://mindmajix.com/genetic-algorithm-in-artificial-intelligence#:~:text=Genetic%20Algorithms%20are%20faster%20and,and%20also%20multi%2Dobjective%20problems.)
 * [Introduction to Genetic Algorithms](https://towardsdatascience.com/introduction-to-genetic-algorithms-including-example-code-e396e98d8bf3)
 * [How does a Genetic Algorithm work?](https://www.pico.net/kb/how-does-a-genetic-algorithm-work)
+
+### Real-world application and problems solved using  Genetic Algorithm:
+[Link 1](https://bioinfopublication.org/files/articles/1_1_1_BIOINFO_GP.pdf)
