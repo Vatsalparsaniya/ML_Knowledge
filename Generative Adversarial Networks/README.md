@@ -40,7 +40,7 @@ Thus D and G plays a minmax game as follows:-
 </p>
 
 
-After several steps of training, if G and D have enough capacity, they will reach point at which the discriminator is unable to differentiate between the two distributions, i.e. D(x) = <sup>1</sup>&frasl;<sub>2</sub>. That means the Generator has suceeded in creating realistic samples from our domain.
+After several steps of training, if G and D have enough capacity, they will reach point at which the discriminator is unable to differentiate between the two distributions, i.e. D(x) = <sup>1</sup>&frasl;<sub>2</sub>. That means the Generator has succeeded in creating realistic samples from our domain.
 
 <p align="center">
   <img src="example.png"><br>
@@ -54,4 +54,4 @@ After several steps of training, if G and D have enough capacity, they will reac
 - https://en.wikipedia.org/wiki/Generative_model
 
 
-**_Thank you!_ ** 
+_**Thank you!**_
