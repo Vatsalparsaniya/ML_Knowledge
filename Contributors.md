@@ -10,3 +10,5 @@
 * [Subhashree Hazra](github.com/subhashreehazra)
 * [Aman Agrawal](https://github.com/Aman-Agrawal01)
 * [Erick Arroyo](https://github.com/Erick-INCS)
+* [Priyanka Roy Chowdhury](https://github.com/prc98)
+
