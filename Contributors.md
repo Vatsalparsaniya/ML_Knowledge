@@ -12,3 +12,4 @@
 * [Erick Arroyo](https://github.com/Erick-INCS)
 * [Priyanka Roy Chowdhury](https://github.com/prc98)
 * [Poornaditya Mishra](https://github.com/poornaditya1)
+* [Swati Rai](https://github.com/rai1410swati)
