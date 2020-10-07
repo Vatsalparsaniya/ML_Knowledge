@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naive Bayes Classifier &#8212; Machine learning book</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="K-Nearest neighbor clustering" href="../Nearest_neighbours/Readme.html" />
+    <link rel="prev" title="Clustering" href="../K-means/Readme.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo_1.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Machine learning book</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Machine learning Knowledge Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topics
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Contributors.html">
+   Contributors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cluster%20Validation/Readme.html">
+   Cluster Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Convolution%20Neural%20Networks/Readme.html">
+   Convolution Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cross-Validation/Readme.html">
+   Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DataScience101/readme.html">
+   DataScience101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Decision_Trees/Readme.html">
+   Decision Trees Algorithm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ensemble%20learning/Readme.html">
+   Ensemble
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Generative%20Adversarial%20Networks/README.html">
+   GANs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Genetic_Algorithms/Readme.html">
+   Genetic Algorithms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../harmful%20object%20detection/README.html">
+   Harmful Object Detection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../K-means/Readme.html">
+   Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../K-means/Readme.html#k-means">
+   K-means
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Naive Bayes Classifier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Nearest_neighbours/Readme.html">
+   K-Nearest neighbor clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Normalization/Readme.html">
+   Data Normalization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Outliers/Readme.html">
+   Outliers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Reinforcement%20Learning/README.html">
+   Reinforcement Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Reinforcement%20Learning/README.html#genetic-algorithm-for-reinforcement-learning">
+   Genetic Algorithm for Reinforcement Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Stacking/README.html">
+   Stacking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Standardization_Normalization/README.html">
+   Standardization and normalization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Support_Vector_Machine/Readme.html">
+   Support vector machine
+   <svm>
+   </svm>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Underfitting%20Overfitting/README.html">
+   Underfitting Overfitting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../XGBoost/Readme.html">
+   XGBoost
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Naive Bayes Classifier/Readme.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="naive-bayes-classifier">
+<h1>Naive Bayes Classifier<a class="headerlink" href="#naive-bayes-classifier" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<ul>
+<li><p><strong>Concept of Naive Bayes Classifier</strong></p>
+<ul class="simple">
+<li><p>Naive Bayes is a simple, yet effective and commonly-used, machine learning classifier.</p></li>
+<li><p>It is a probabilistic classifier that makes classifications using the Maximum A Posteriori decision rule in a Bayesian setting.</p></li>
+<li><p>It can also be represented using a very simple Bayesian network.</p></li>
+</ul>
+</li>
+<li><p><strong>How Algorithm Works</strong></p>
+<p><img alt="Naive_Bayes_Classifier1" src="../_images/Naive_Bayes_Classifier1.png" /></p>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">Where</span><span class="p">,</span>
+   <span class="n">P</span><span class="p">(</span><span class="n">c</span><span class="o">|</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">posterior</span> <span class="n">probability</span> <span class="n">of</span> <span class="k">class</span> <span class="nc">c</span> <span class="n">given</span> <span class="n">predictor</span> <span class="p">(</span> <span class="n">features</span><span class="p">)</span><span class="o">.</span>
+   <span class="n">P</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">class</span><span class="o">.</span>
+   <span class="n">P</span><span class="p">(</span><span class="n">x</span><span class="o">|</span><span class="n">c</span><span class="p">)</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">likelihood</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">predictor</span> <span class="n">given</span> <span class="n">class</span><span class="o">.</span>
+   <span class="n">P</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">prior</span> <span class="n">probability</span> <span class="n">of</span> <span class="n">predictor</span><span class="o">.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Advantages of Naive Bayes Classifier</strong></p>
+<ul>
+<li><p>The only work that must be done before prediction is finding the parameters for the features’ individual probability distributions, which can typically be done quickly and deterministically.</p></li>
+<li><p>Naive Bayes classifiers can perform well even with high-dimensional data points and/or a large number of data points.</p></li>
+<li><p>When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.</p></li>
+</ul>
+</li>
+<li><p><strong>Disadvantages of Naive Bayes Classifier</strong></p>
+<ul>
+<li><p>If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as Zero Frequency. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called Laplace estimation.</p></li>
+<li><p>Another limitation of Naive Bayes is the assumption of independent predictors. In real life, it is almost impossible that we get a set of predictors which are completely independent.</p></li>
+</ul>
+</li>
+<li><p><strong>Different Problem statement where you can Naive Bayes Classifier</strong></p>
+<ul>
+<li><p>Naive Bayes classifiers have been especially popular for text classification, and are a traditional solution for problems such as spam detection.</p></li>
+<li><p>Sentiment Analysis</p></li>
+<li><p>Spam classification</p></li>
+<li><p>twitter sentiment analysis</p></li>
+<li><p>document categorization</p></li>
+</ul>
+</li>
+<li><p>Reference</p>
+<ul>
+<li><p><a class="reference external" href="https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c">Naive Bayes Classifier</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/all-about-naive-bayes-8e13cef044cf">All about Naive Bayes</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Naive Bayes Classifier"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../K-means/Readme.html" title="previous page">Clustering</a>
+    <a class='right-next' id="next-link" href="../Nearest_neighbours/Readme.html" title="next page">K-Nearest neighbor clustering</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Machine learning Knowledge Project<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

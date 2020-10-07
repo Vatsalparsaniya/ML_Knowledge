@@ -1,0 +1,32 @@
+- file: README.md
+
+- part : Topics
+  chapters:
+    - file: Contributors.md
+    - file: Cluster Validation/Readme.md
+      title: Cluster Validation
+    - file: Convolution Neural Networks/Readme.md
+      title: Convolution Neural Networks
+    - file: Cross-Validation/Readme.md
+      title: Cross-Validation
+    - file: DataScience101/readme.md
+    - file: Decision_Trees/Readme.md
+    - file: Ensemble learning/Readme.md
+    - file: Generative Adversarial Networks/README.md
+    - file: Genetic_Algorithms/Readme.md
+    - file: harmful object detection/README.md
+    - file: K-means/Readme.md
+    - file: Naive Bayes Classifier/Readme.md
+    - file: Nearest_neighbours/Readme.md
+    - file: Normalization/Readme.md
+    - file: Outliers/Readme.md
+    - file: Reinforcement Learning/README.md
+    - file: Stacking/README.md
+    - file: Standardization_Normalization/README.md
+    - file: Support_Vector_Machine/Readme.md
+    - file: Underfitting Overfitting/README.md
+    - file: XGBoost/Readme.md
+    
+
+
+

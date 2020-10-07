@@ -1,5 +1,6 @@
-###
-# **What does a day in the data science life look like?**
+# DataScience101
+
+## **What does a day in the data science life look like?**
 
 You want to dive into the fascinating world of data and AI and yes, data science is the stepping stone to it but sometimes, it&#39;s hard to decide from where to start it from. Just looking at all the technologies you have to understand and tools you&#39;re supposed to master can be dizzying. Often beginners in the field start off with applying fancy algorithms without any preprocessing and hence don&#39;t get expected results. What data science steps do you take first?
 

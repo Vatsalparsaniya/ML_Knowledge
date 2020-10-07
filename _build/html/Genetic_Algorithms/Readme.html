@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genetic Algorithms &#8212; Machine learning book</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Harmful Object Detection" href="../harmful%20object%20detection/README.html" />
+    <link rel="prev" title="GANs" href="../Generative%20Adversarial%20Networks/README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo_1.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Machine learning book</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Machine learning Knowledge Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topics
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Contributors.html">
+   Contributors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cluster%20Validation/Readme.html">
+   Cluster Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Convolution%20Neural%20Networks/Readme.html">
+   Convolution Neural Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Cross-Validation/Readme.html">
+   Cross-Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DataScience101/readme.html">
+   DataScience101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Decision_Trees/Readme.html">
+   Decision Trees Algorithm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Ensemble%20learning/Readme.html">
+   Ensemble
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Generative%20Adversarial%20Networks/README.html">
+   GANs
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Genetic Algorithms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../harmful%20object%20detection/README.html">
+   Harmful Object Detection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../K-means/Readme.html">
+   Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../K-means/Readme.html#k-means">
+   K-means
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Naive%20Bayes%20Classifier/Readme.html">
+   Naive Bayes Classifier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Nearest_neighbours/Readme.html">
+   K-Nearest neighbor clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Normalization/Readme.html">
+   Data Normalization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Outliers/Readme.html">
+   Outliers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Reinforcement%20Learning/README.html">
+   Reinforcement Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Reinforcement%20Learning/README.html#genetic-algorithm-for-reinforcement-learning">
+   Genetic Algorithm for Reinforcement Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Stacking/README.html">
+   Stacking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Standardization_Normalization/README.html">
+   Standardization and normalization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Support_Vector_Machine/Readme.html">
+   Support vector machine
+   <svm>
+   </svm>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Underfitting%20Overfitting/README.html">
+   Underfitting Overfitting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../XGBoost/Readme.html">
+   XGBoost
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Genetic_Algorithms/Readme.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-genetic-algorithms">
+   Why Genetic Algorithms?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-ga-s-work">
+   how do GA’s work?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialization">
+     Initialization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selection">
+     Selection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crossover">
+     Crossover
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mutation">
+     Mutation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advantages-of-ga-s">
+   Advantages of GA’s:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#disadvantages-limitations-of-gas">
+   Disadvantages / Limitations of GA’s:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#real-world-application-and-problems-solved-using-genetic-algorithm">
+   Real-world application and problems solved using  Genetic Algorithm:
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="genetic-algorithms">
+<h1>Genetic Algorithms<a class="headerlink" href="#genetic-algorithms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-genetic-algorithms">
+<h2>Why Genetic Algorithms?<a class="headerlink" href="#why-genetic-algorithms" title="Permalink to this headline">¶</a></h2>
+<p>Genetic algorithms simulate the process of natural selection which means those species who can adapt to changes in their environment are able to survive and reproduce and go to next generation.</p>
+</div>
+<div class="section" id="how-do-ga-s-work">
+<h2>how do GA’s work?<a class="headerlink" href="#how-do-ga-s-work" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="initialization">
+<h3>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h3>
+<p>The evolutionary process begins with initialization, wherein an initial <strong>population</strong> of candidate solutions is generated. There are many different methods of initializing populations, but with Genetic Algorithms the most popular method of initialization is simply to create a population of randomly initialized binary strings, <strong>chromosomes</strong>.The bits of the strings are called <strong>genes</strong>.Once the initial population has been created, the evolutionary generational cycle begins.</p>
+</div>
+<div class="section" id="selection">
+<h3>Selection<a class="headerlink" href="#selection" title="Permalink to this headline">¶</a></h3>
+<p>The idea of <strong>selection</strong> phase is to select the fittest individuals and let them pass their genes to the next generation.
+Two pairs of individuals (<strong>parents</strong>) are selected based on their fitness scores. Individuals with high fitness have more chance to be selected for reproduction.</p>
+</div>
+<div class="section" id="crossover">
+<h3>Crossover<a class="headerlink" href="#crossover" title="Permalink to this headline">¶</a></h3>
+<p><strong>Crossover</strong> is the most significant phase in a genetic algorithm. For each pair of parents to be mated, a <strong>crossover point</strong> is chosen at random from within the genes.
+For example, consider the crossover point to be 3 as shown below.</p>
+<p><img alt="Crossover point" src="https://miro.medium.com/max/409/1*Wi6ou9jyMHdxrF2dgczz7g.png" /></p>
+<p><strong>Offspring</strong> are created by exchanging the genes of parents among themselves until the crossover point is reached.
+<img alt="Exchanging genes among parents" src="https://miro.medium.com/max/389/1*eQxFezBtdfdLxHsvSvBNGQ.png" /></p>
+<p>The new offspring are added to the population.</p>
+</div>
+<div class="section" id="mutation">
+<h3>Mutation<a class="headerlink" href="#mutation" title="Permalink to this headline">¶</a></h3>
+<p>While crossover simply swaps pre-existing information between pairs of candidate solutions, <strong>mutation</strong> in Evolutionary Algorithms is typically the standard method of introducing “new” genetic material into the population. Once the child population has been created via crossover, mutation in canonical Genetic Algorithms then occurs on all children in a “bit-flip” fashion by randomly changing codons on the chromosome between 0 and 1.</p>
+<p><img alt="Mutation: Before and After" src="https://miro.medium.com/max/439/1*CGt_UhRqCjIDb7dqycmOAg.png" /></p>
+<blockquote>
+<div><p>Mutation occurs to maintain diversity within the population and prevent premature convergence.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="advantages-of-ga-s">
+<h2>Advantages of GA’s:<a class="headerlink" href="#advantages-of-ga-s" title="Permalink to this headline">¶</a></h2>
+<p>With the understanding that we have about the Genetic Algorithms, it is the best time for us to discuss various advantages and disadvantages of them. Genetic Algorithms have a numerous number of advantages and hence a reason why they are particularly very popular. Some of the most common advantages of the Genetic Algorithms are given in this section of the article, as given below:</p>
+<ul class="simple">
+<li><p>Genetic Algorithms do not require any derivative information (There is every possibility that there may not be any information that we can rely on based on the problem that we choose to solve with these Genetic Algorithms).</p></li>
+<li><p>Genetic Algorithms are faster and efficient when compared to the traditional methods of brute-force search.</p></li>
+<li><p>Genetic Algorithms is proven to have many parallel capabilities</p></li>
+<li><p>Optimizes both continuous and discrete functions and also multi-objective problems.</p></li>
+</ul>
+</div>
+<div class="section" id="disadvantages-limitations-of-gas">
+<h2>Disadvantages / Limitations of GA’s:<a class="headerlink" href="#disadvantages-limitations-of-gas" title="Permalink to this headline">¶</a></h2>
+<p>As per the discussions above, the following are the limitations to Genetic Algorithms which are listed as below:</p>
+<ul class="simple">
+<li><p>Genetic Algorithms are not best suited for simpler problems where the derivative information is readily available.</p></li>
+<li><p>Fitness value gets evaluated on a set of generations, and this can be an expensive process for a certain number of problems using Genetic Algorithms.</p></li>
+<li><p>If a Genetic algorithm is not put to use in the best manner, it may not converge to an optimal solution.</p></li>
+</ul>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://mindmajix.com/genetic-algorithm-in-artificial-intelligence#:~:text=Genetic%20Algorithms%20are%20faster%20and,and%20also%20multi%2Dobjective%20problems.">Genetic Algorithm in Artificial Intelligence</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/introduction-to-genetic-algorithms-including-example-code-e396e98d8bf3">Introduction to Genetic Algorithms</a></p></li>
+<li><p><a class="reference external" href="https://www.pico.net/kb/how-does-a-genetic-algorithm-work">How does a Genetic Algorithm work?</a></p></li>
+</ul>
+</div>
+<div class="section" id="real-world-application-and-problems-solved-using-genetic-algorithm">
+<h2>Real-world application and problems solved using  Genetic Algorithm:<a class="headerlink" href="#real-world-application-and-problems-solved-using-genetic-algorithm" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://bioinfopublication.org/files/articles/1_1_1_BIOINFO_GP.pdf">Link 1</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Genetic_Algorithms"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Generative%20Adversarial%20Networks/README.html" title="previous page">GANs</a>
+    <a class='right-next' id="next-link" href="../harmful%20object%20detection/README.html" title="next page">Harmful Object Detection</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Machine learning Knowledge Project<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

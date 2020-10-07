@@ -1,4 +1,4 @@
-# Harmful Object Detection using HAAR CASCADE and OpenCV in Python
+# Harmful Object Detection 
 
 ###### Required libraries 
  * OpenCV (***pip install opencv-python***)

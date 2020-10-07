@@ -1,0 +1,11 @@
+# Book settings
+title: Machine learning book
+author: Vatsal Parsaniya
+logo: logo_1.png
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+repository:
+  url: https://github.com/Vatsalparsaniya/ML_Knowledge

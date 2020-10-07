@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cluster-Validation &#8212; My sample book</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-2 bd-sidebar site-navigation show single-page" id="site-navigation">
+    
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Readme.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#internal-measures">
+   Internal measures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimal-clusters">
+   Optimal Clusters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distance">
+   Distance
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intercluster-distance">
+     Intercluster Distance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intracluster-distance">
+     Intracluster distance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dunns-index">
+     Dunn’s Index
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#davies-bouldin-index-dbindex">
+     Davies-Bouldin index DBIndex
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="cluster-validation">
+<h1>Cluster-Validation<a class="headerlink" href="#cluster-validation" title="Permalink to this headline">¶</a></h1>
+<p>:triangular_flag_on_post: Many interesting algorithms applied to
+analyze very large datasets. Most algorithms don’t provide any means for its validation and evaluation. So it is very difficult to conclude which are the best clusters and should be taken for analysis. Whatever the intention of clustering may be, the number of clusters sought is always unknown (more or less). Some internal measures:</p>
+<p>:heavy_check_mark: Compactness</p>
+<p>:heavy_check_mark: Connectedness</p>
+<p>:heavy_check_mark: Separation</p>
+<p>:heavy_check_mark: Combination</p>
+<div class="section" id="internal-measures">
+<h2>Internal measures<a class="headerlink" href="#internal-measures" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Internal measures" src="_images/internalmeasures.PNG" /></p>
+</div>
+<div class="section" id="optimal-clusters">
+<h2>Optimal Clusters<a class="headerlink" href="#optimal-clusters" title="Permalink to this headline">¶</a></h2>
+<p>:triangular_flag_on_post: There are several robust strategies for predicting optimal clusters:</p>
+<p>:heavy_check_mark: silhouette index</p>
+<p>:heavy_check_mark: Dunn’s index</p>
+<p>:heavy_check_mark: Davies-Bouldin (DB) index</p>
+<p>:heavy_check_mark: Xie-Beni (XB) index</p>
+<p>:heavy_check_mark: I-index</p>
+<p>:heavy_check_mark: CS-index</p>
+</div>
+<div class="section" id="distance">
+<h2>Distance<a class="headerlink" href="#distance" title="Permalink to this headline">¶</a></h2>
+<p>Calculate a distance between 2 points p (x1, y1) and q (x2, y2) in XY-plane.</p>
+<p>:heavy_check_mark: Euclidean distance</p>
+<p>:heavy_check_mark: Chebyshev distance</p>
+<p>:heavy_check_mark: Manhattan distance</p>
+<p>:heavy_check_mark: Mahalanobis distance</p>
+<p>:heavy_check_mark: Minkowski distance</p>
+<p><img alt="Distance" src="_images/distance.PNG" /></p>
+<div class="section" id="intercluster-distance">
+<h3>Intercluster Distance<a class="headerlink" href="#intercluster-distance" title="Permalink to this headline">¶</a></h3>
+<p>:triangular_flag_on_post: Let S and T are clusters formed using partition U. d(x, y) is the distance between two objects x and y belonging to S and T respectively. d (x, y) is calculated using well known metrics such as Euclidean, Manha:an and Chebychev. |S|
+and |T| are the number of objects in clusters S and T respectively.</p>
+<p>The single linkage distance is the closest distance between two objects belonging to two different clusters defined as:-</p>
+<p><img alt="Intercluster distance" src="_images/interclusterdistance1.PNG" /></p>
+<p>The complete linkage distance represents the distance between the most remote objects belonging to two different clusters, given as:-</p>
+<p><img alt="Intercluster distance" src="_images/interclusterdistance2.PNG" /></p>
+<p>The average linkage distance defines the average distance between all the objects belonging to two different clusters, described as:-</p>
+<p><img alt="Intercluster distance" src="_images/interclusterdistance3.PNG" /></p>
+<p>The centroid linkage distance reflects the distance between the centers vs and vt of two clusters S and T respec9vely, presented below:-</p>
+<p><img alt="Intercluster distance" src="_images/interclusterdistance4.PNG" /></p>
+<p>The average of centroids linkage represents the distance between the center of a cluster and all the objects belonging to a different
+cluster, explained as:-</p>
+<p><img alt="Intercluster distance" src="_images/interclusterdistance5.PNG" /></p>
+</div>
+<div class="section" id="intracluster-distance">
+<h3>Intracluster distance<a class="headerlink" href="#intracluster-distance" title="Permalink to this headline">¶</a></h3>
+<p>:triangular_flag_on_post: There are basically three types of intracluster
+distances:
+The complete diameter distance is the distance between the most remote objects belonging to the same cluster, as given below:-</p>
+<p><img alt="Intracluster distance" src="_images/intraclusterdistance1.PNG" /></p>
+<p>The average diameter distance represents the average distance between all the objects belonging to the same cluster, as defined
+below:-</p>
+<p><img alt="Intracluster distance" src="_images/intraclusterdistance2.PNG" /></p>
+<p>The centroid diameter distance defines the double average distance between all of the objects and the cluster’s center, as illustrated below:-</p>
+<p><img alt="Intracluster distance" src="_images/intraclusterdistance3.PNG" /></p>
+</div>
+<div class="section" id="dunns-index">
+<h3>Dunn’s Index<a class="headerlink" href="#dunns-index" title="Permalink to this headline">¶</a></h3>
+<p>:triangular_flag_on_post: The Dunn’s valida9on index, DIndex, is defined as:</p>
+<p><img alt="Dunn's index" src="_images/dunnsindex.PNG" /></p>
+<p>δ (Xi, Xj) is the intercluster distance i.e. the distance between cluster Xi and Xj and Δ(Xk) is the intracluster distance of cluster Xk i.e. distance within the cluster Xk.</p>
+<p>The goal is to maximize the intercluster distances and minimizing the intracluster distances. The large values of Dindex corresponds to good quality cluster. Thus the number of clusters that maximizes DIndex is taken as the op9mal number of clusters k</p>
+</div>
+<div class="section" id="davies-bouldin-index-dbindex">
+<h3>Davies-Bouldin index DBIndex<a class="headerlink" href="#davies-bouldin-index-dbindex" title="Permalink to this headline">¶</a></h3>
+<p>:triangular_flag_on_post: Davies-Bouldin Index finds the set of clusters that are compact and well separated. The Davies-Bouldin index DBIndex is defined as:</p>
+<p><img alt="Davies-Bouldin index" src="_images/davies-bouldinindex.PNG" /></p>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<p>[Link 1] (https://www.datanovia.com/en/lessons/cluster-validation-statistics-must-know-methods/)</p>
+<p>[Link 2] (https://www.youtube.com/watch?v=d8MgdChSdyE)</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

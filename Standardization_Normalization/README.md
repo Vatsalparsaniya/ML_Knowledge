@@ -1,4 +1,4 @@
-# STANDARDIZATION and NORMALIZATION
+# Standardization and normalization
 
 * Standardization:
 	- “Standardizing” a vector most often means subtracting a measure of location and dividing by a measure of scale. 

@@ -1,4 +1,5 @@
-# A simple introduction to Generative Adversarial Networks (GANs) #
+# GANs
+## A simple introduction to Generative Adversarial Networks (GANs) #
 
 ## Generative Model ##
 

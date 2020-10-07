@@ -1,4 +1,4 @@
-# 📙 Machine learning Knowledge Project 📙
+# Machine learning Knowledge Project
 
 ---
 
