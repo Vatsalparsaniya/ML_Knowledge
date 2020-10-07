@@ -25,11 +25,11 @@ If you want to go into the mathematics, you can have a look below or if you hate
 ### Application in Real Life
 
 Pick any two things that you use in your daily life and that are related.
-Like, I have data of my monthly spending, monthly income and the number of trips per month for the last three years. Now I need to answer the following questions:
+Like, I have data of monthly spending, monthly income and the number of trips per month for the last three years. Now I need to answer the following questions:
 
-What will be my monthly spending for next year?
+What will be the monthly spending for next year?
 
-Which factor(monthly income or number of trips per month) is more important in deciding my monthly spending
+Which factor(monthly income or number of trips per month) is more important in deciding the monthly spending
 
 How monthly income and trips per month are correlated with monthly spending?
 
