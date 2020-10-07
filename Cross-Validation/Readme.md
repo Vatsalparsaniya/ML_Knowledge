@@ -46,7 +46,7 @@ K-fold is a popular kind of cross-validation technique, in which, say k=10 for e
 
 ## Most commonly used Cross Validations ##
 
-### K-Fold Cross Validation ### 
+### K-Fold Cross Validation ###
 In K-Folds Cross Validation we split our data into k different subsets (or folds). We use k-1 subsets to train our data and leave the last subset (or the last fold) as test data. We then average the model against each of the folds and then finalize our model. After that we test it against the test set.
 
 ### Leave One Out Cross Validation (LOOCV) ###
@@ -55,7 +55,7 @@ This is another method for cross validation, Leave One Out Cross Validation (by 
 #### Do you want to learn more? Click here. ####
 [Cross-Validation Wikipedia page](https://en.wikipedia.org/wiki/Cross-validation_(statistics))
 
- 
+
 :arrow_lower_right: References:
 
 [Link 1](https://www.geeksforgeeks.org/cross-validation-machine-learning/)
@@ -65,3 +65,11 @@ This is another method for cross validation, Leave One Out Cross Validation (by 
 [Link 3](https://www.geeksforgeeks.org/cross-validation-machine-learning/)
 
 [Link_4](https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6)
+
+### Some more about cross validation(including model selection,implementation and evaluation)
+[Link 1](https://arxiv.org/pdf/1811.12808.pdf)
+[Link 2](https://www.cl.cam.ac.uk/teaching/1920/NLP/Session5.pdf)
+
+
+### Real world implementation of cross validation:
+[Link 1](https://www.developer.com/mgmt/real-world-machine-learning-model-evaluation-and-optimization.html)
