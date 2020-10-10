@@ -14,60 +14,60 @@ Principal component analysis (PCA) is a technique to bring out strong patterns i
 ## Algorithm ##
 
 * **1 : Get your data**
-Separate your data set into X and Y. X will be the training set and Y will be the validation set. In simple terms, we will use X for our study and use Y to check whether our study is correct.
+  Separate your data set into X and Y. X will be the training set and Y will be the validation set. In simple terms, we will use X for our study and use Y to check whether our study is correct.
 
 * **2 : Structure your data**
 
-Take the 2 dimensional matrix of independent variables X. Rows represent data items and columns represent features. The number of columns is the number of dimensions.
+  Take the 2 dimensional matrix of independent variables X. Rows represent data items and columns represent features. The number of columns is the number of dimensions.
 
-For each column, subtract the **mean** of that column from each entry. (This ensures that each column has a mean of zero.)
+  For each column, subtract the **mean** of that column from each entry. (This ensures that each column has a mean of zero.)
 
 * **3 : Standardize your data**
 
-Given the columns of X, are features with higher variance more important than features with lower variance, or is the importance of features independent of the variance? (In this case, importance means how well that feature predicts Y.)
+  Given the columns of X, are features with higher variance more important than features with lower variance, or is the importance of features independent of the variance? (In this case, importance means how well that feature predicts Y.)
 
-If the importance of features is independent of the variance of the features, then divide each observation in a column by that column’s standard deviation. Call the centered and standardized matrix **Z**.
+  If the importance of features is independent of the variance of the features, then divide each observation in a column by that column’s standard deviation. Call the centered and standardized matrix **Z**.
 
 * **4 : Get Covariance of Z**
 
-Take the matrix Z, transpose it and multiply the transposed matrix by Z.
+  Take the matrix Z, transpose it and multiply the transposed matrix by Z.
 
   **Convariance of Z = ZᵀZ**
 
-The resulting matrix is the covariance matrix of Z, up to a constant.
+  The resulting matrix is the covariance matrix of Z, up to a constant.
 
 * **5 : Calculate Eigen Vectors and Eigen Values**
 
-Calculate the eigenvectors and their corresponding eigenvalues of ZᵀZ.
+  Calculate the eigenvectors and their corresponding eigenvalues of ZᵀZ.
 
-The eigen decomposition of ZᵀZ is where we decompose ZᵀZ into PDP⁻¹,
+  The eigen decomposition of ZᵀZ is where we decompose ZᵀZ into PDP⁻¹,
 
-where P is the matrix of eigenvectors
-D is the diagonal matrix with eigenvalues on the diagonal and values of zero everywhere else.
+  where P is the matrix of eigenvectors
+  D is the diagonal matrix with eigenvalues on the diagonal and values of zero everywhere else.
 
-The eigenvalues on the diagonal of D will be associated with the corresponding column in P — that is, the first element of D is λ₁ and the corresponding eigenvector is the first column of P. This holds for all elements in D and their corresponding eigenvectors in P. We will always be able to calculate PDP⁻¹ in this fashion.
+  The eigenvalues on the diagonal of D will be associated with the corresponding column in P — that is, the first element of D is λ₁ and the corresponding eigenvector is the first column of P. This holds for all elements in D and their corresponding eigenvectors in P. We will always be able to calculate PDP⁻¹ in this fashion.
 
 * **6 : Sort the Eigen Vectors**
 
-Take the eigenvalues λ₁, λ₂, …, λp and sort them from largest to smallest. In doing so, sort the eigenvectors in P accordingly. (For example, if λ4 is the largest eigenvalue, then take the forth column of P and place it in the first column position.)
+  Take the eigenvalues λ₁, λ₂, …, λp and sort them from largest to smallest. In doing so, sort the eigenvectors in P accordingly. (For example, if λ4 is the largest eigenvalue, then take the forth column of P and place it in the first column position.)
 
-Call this sorted matrix of eigenvectors P'. The columns of P' are the same as the columns of P in a different order. Note that these eigenvectors are independent of one another.
+  Call this sorted matrix of eigenvectors P'. The columns of P' are the same as the columns of P in a different order. Note that these eigenvectors are independent of one another.
 
 * **7 : Calculate the New Features**
 
-Calculate Z' = ZP'.
+  Calculate Z' = ZP'.
 
-This new matrix, Z', is a centered/standardized version of X but now each observation is a combination of the original variables, where the weights are determined by the eigenvector. As a bonus, because our eigenvectors in P' are independent of one another, each column of Z' is also independent of one another.
+  This new matrix, Z', is a centered/standardized version of X but now each observation is a combination of the original variables, where the weights are determined by the eigenvector. As a bonus, because our eigenvectors in P' are independent of one another, each column of Z' is also independent of one another.
 
 * **8 : Drop unimportant features from the new set**
 
-There are three common methods to do this:
+  There are three common methods to do this:
 
-**Method 1**: Arbitrarily select how many dimensions we want to keep
+  **Method 1**: Arbitrarily select how many dimensions we want to keep
 
-**Method 2**: Calculate the proportion of variance for each feature, pick a threshold, and add features until you hit that threshold
+  **Method 2**: Calculate the proportion of variance for each feature, pick a threshold, and add features until you hit that threshold
 
-**Method 3**: Calculate the proportion of variance for each feature, sort features by proportion of variance and plot the cumulative proportion of variance explained as you keep more features. One can pick how many features to include by identifying the point where adding a new feature has a significant drop in variance explained relative to the previous feature, and choosing features up until that point.
+  **Method 3**: Calculate the proportion of variance for each feature, sort features by proportion of variance and plot the cumulative proportion of variance explained as you keep more features. One can pick how many features to include by identifying the point where adding a new feature has a significant drop in variance explained relative to the previous feature, and choosing features up until that point.
 
 ## Advantages of PCA ##
   * Removes Correlated Features
@@ -89,5 +89,7 @@ There are three common methods to do this:
 
 References :
 [Algorithm](https://iq.opengenus.org/algorithm-principal-component-analysis-pca/)
+
 [more about advantages and disadvantages](http://theprofessionalspoint.blogspot.com/2019/03/advantages-and-disadvantages-of_4.html)
+
 [more about PCA Assumptions](https://statistics.laerd.com/spss-tutorials/principal-components-analysis-pca-using-spss-statistics.php)
